@@ -13,10 +13,10 @@ public class Mitarbeiter {
         this.yearOfEntry = yearOfEntry;
     }
 
-    public String getInfo(String... fields) {
+    public String getInfo(String... fields) {      // Variable Anzahl von Argumenten
         StringBuilder sb = new StringBuilder();
-        for (String field : fields) {
-            switch (field.toLowerCase()) {
+        for (String field : fields) {              // Schleife für alle Felder
+            switch (field) {
                 case "name":
                     sb.append(this.familyName).append(" ");
                     break;
@@ -34,6 +34,6 @@ public class Mitarbeiter {
                     break;
             }
         }
-        return sb.toString().trim();
+        return sb.toString();
     }
 }
